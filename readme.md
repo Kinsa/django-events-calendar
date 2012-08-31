@@ -18,7 +18,7 @@ Add the following to the ``patterns()`` method in the project's primary ``urls.p
     
 The event list can now be referred to with the url 'events':
 
-    <a href="{% url 'events' %}">Events</a>
+    <a href="{% url events %}">Events</a>
 
 The RSS feed can now be referred to in the ``<head>`` of your HTML templates:
     
