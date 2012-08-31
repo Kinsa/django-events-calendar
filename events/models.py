@@ -32,7 +32,7 @@ class Event(models.Model):
 
     image = ImageField(upload_to='events', blank=True, 
         help_text='80px X 80px')
-    image_alt_text = models.TextField(max_length=250, help_text=''\
+    image_alt_text = models.CharField(max_length=250, help_text=''\
         'Describe the image as you would to someone over the phone. '\
         'Max length 250 characters.')
 
