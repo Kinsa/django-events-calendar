@@ -1,0 +1,77 @@
+[
+    {
+        "pk": 9, 
+        "model": "events.event", 
+        "fields": {
+            "updated": "2011-07-25", 
+            "description": "Lorem ipsum dolor sit.", 
+            "end_date": "2011-03-04", 
+            "created": "2011-07-25", 
+            "url": "", 
+            "image": "", 
+            "start_date": "2011-03-07", 
+            "name": "Far Past Event",
+            "slug": "far-past-event"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "events.event", 
+        "fields": {
+            "updated": "2011-07-25", 
+            "description": "Lorem ipsum dolor sit.", 
+            "end_date": "2011-07-25", 
+            "created": "2011-07-25", 
+            "url": "", 
+            "image": "", 
+            "start_date": "2011-07-22", 
+            "name": "Near Past Event",
+            "slug": "near-past-event"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "events.event", 
+        "fields": {
+            "updated": "2011-07-25", 
+            "description": "Lorem ipsum dolor sit.", 
+            "end_date": "2011-07-28", 
+            "created": "2011-07-25", 
+            "url": "", 
+            "image": "", 
+            "start_date": "2011-07-25", 
+            "name": "Current Event",
+            "slug": "current-event"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "events.event", 
+        "fields": {
+            "updated": "2011-07-25", 
+            "description": "Lorem ipsum dolor sit.", 
+            "end_date": "2011-08-02", 
+            "created": "2011-07-25", 
+            "url": "", 
+            "image": "", 
+            "start_date": "2011-07-30", 
+            "name": "Near Future Event",
+            "slug": "near-future-event"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "events.event", 
+        "fields": {
+            "updated": "2011-07-25", 
+            "description": "Lorem ipsum dolor sit.", 
+            "end_date": "2011-12-15", 
+            "created": "2011-07-25", 
+            "url": "", 
+            "image": "", 
+            "start_date": "2011-12-12", 
+            "name": "Far Future Event",
+            "slug": "far-future-event"
+        }
+    }
+]
