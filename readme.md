@@ -8,6 +8,8 @@ Add ``'sorl.thumbnail',`` to the ``INSTALLED_APPS`` tuple in ``settings.py``.
 
 Sync the database to finish installing sorl-thumbnail.
 
+Migrate the database to finish installing events.
+
 Add the following to the ``patterns()`` method in the project's primary ``urls.py`` file:
 
     url(r'^events/', include('events.urls')),
