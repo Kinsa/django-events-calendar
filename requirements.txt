@@ -1,2 +1,4 @@
+#django
+markdown
 sorl-thumbnail
 south
