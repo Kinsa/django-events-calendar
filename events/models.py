@@ -10,9 +10,8 @@ from sorl.thumbnail import ImageField
 class UpcomingEventManager(models.Manager):
 
     def get_query_set(self):
-        dr = datetime.date.today() + datetime.timedelta(weeks=12)
         return super(UpcomingEventManager, self).get_query_set().filter(
-            start_date__gte=datetime.date.today(), start_date__lte=dr)
+            end_date__gte=datetime.date.today())
 
 
 class Event(models.Model):
