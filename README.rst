@@ -13,7 +13,7 @@ Installation from Source
  $ cd django-events
  $ python setup.py install
 
-You will also have to install `South <http://pypi.python.org/pypi/South/>`_, `Markdown <http://pypi.python.org/pypi/Markdown/>`_ and `sorl-thumbnail <http://pypi.python.org/pypi/sorl-thumbnail/>`_.
+You will also have to install `PIL <http://pypi.python.org/pypi/PIL>`_, `Markdown <http://pypi.python.org/pypi/Markdown/>`_, `sorl-thumbnail <http://pypi.python.org/pypi/sorl-thumbnail/>`_, and `South <http://pypi.python.org/pypi/South/>`_.
 
 Installation via PIP Requirements File
 ======================================
@@ -23,6 +23,7 @@ Include in the PIP requirements file the following lines:
 ::
 
  markdown==2.2.1
+ PIL==1.1.6
  sorl-thumbnail=3.2.5
  south==0.7.6
  -e git://github.com/jbergantine/django-events.git#egg=events
