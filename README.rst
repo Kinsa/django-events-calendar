@@ -64,23 +64,25 @@ In the project's urls.py file add:
 
 ::
 
-    url(r'^events/', include('events.urls')),
+ url(r'^events/', include('events.urls')),
     
 A list of upcoming events can now be linked to:
 
 ::
 
-    <a href="{% url events %}">Events</a>
+ <a href="{% url events %}">Events</a>
 
 The RSS feed of upcoming events can now be referred to in the ``<head>`` of your HTML templates:
 
 ::
     
-    <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url events_feed %}" />
+ <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url events_feed %}" />
 
 Configure the Templates
 =======================
 
-By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using Virtualenv, ``cd`` to the root of the django project and execute the following command: ::
+By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using Virtualenv, ``cd`` to the root of the django project and execute the following command: 
+
+::
 
  cp -r $VIRTUAL_ENV/src/django-events/events/templates/events templates/events
