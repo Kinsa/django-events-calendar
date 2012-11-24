@@ -71,8 +71,8 @@ version = __import__('events').__version__
 setup(
     name='django-events',
     version=version,
-    description="Simple Events Calendar for Django",
-    long_description="""django-events creates a simple events calendar application
+    description="Simple Upcoming Events Calendar for Django",
+    long_description="""django-events creates a simple upcoming events calendar application
 for Django projects. See the project page for more information:
   https://github.com/jbergantine/django-events""",
     author='Joe Bergantine',
