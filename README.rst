@@ -23,7 +23,7 @@ Include in the PIP requirements file the following lines:
  markdown==2.2.1
  sorl-thumbnail=3.2.5
  south==0.7.6
- -e git://github.com/jbergantine/django-blog.git#egg=django_blog
+ -e git://github.com/jbergantine/django-events.git#egg=events
 
 And then install as normal (IE:)
 
