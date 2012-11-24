@@ -24,7 +24,7 @@ Include in the PIP requirements file the following lines:
 
  markdown==2.2.1
  PIL==1.1.6
- sorl-thumbnail=3.2.5
+ sorl-thumbnail==3.2.5
  south==0.7.6
  -e git://github.com/jbergantine/django-events.git#egg=events
 
