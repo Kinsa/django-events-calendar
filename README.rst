@@ -43,6 +43,7 @@ Add to the project's settings file tuple of INSTALLED_APPS:
 
  'events',
  'markdown',
+ 'pil',
  'sorl.thumbnail',
  'south'
 
