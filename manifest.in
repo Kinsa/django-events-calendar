@@ -1,0 +1,3 @@
+recursive-include events/templates *.html
+include LICENSE.txt
+include README.rst
