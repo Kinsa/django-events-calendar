@@ -1,5 +1,4 @@
 import datetime
-import markdown
 
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -26,8 +25,7 @@ class Event(models.Model):
 
     url = models.URLField(blank=True)
 
-    description = models.TextField(help_text="Use Markdown to mark this up.")
-    description_html = models.TextField(editable=False, blank=True)
+    description = models.TextField()
 
     image = ImageField(upload_to='events', blank=True, 
         help_text='80px X 80px')
@@ -37,10 +35,6 @@ class Event(models.Model):
 
     created = models.DateTimeField(auto_now_add=True, editable=False)
     updated = models.DateTimeField(auto_now=True, editable=False)
-
-    def save(self, *args, **kwargs):
-        self.description_html = markdown.markdown(self.description)
-        super(Event, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('events')
