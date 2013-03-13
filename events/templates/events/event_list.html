@@ -23,7 +23,7 @@
                     
                     <h1>{% if object.url %}<a href="{{ object.url }}" title="Website for {{ object.name|safe }}.">{% endif %}{{ object.name|safe }}{% if object.url %}</a>{% endif %}</h1>
                     <div class="description">
-                        {{ object.description_html|safe }}
+                        {{ object.description|safe }}
                     </div>
                 </article>
             {% endfor %}
