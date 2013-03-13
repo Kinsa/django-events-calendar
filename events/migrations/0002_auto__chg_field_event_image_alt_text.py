@@ -22,7 +22,6 @@ class Migration(SchemaMigration):
             'Meta': {'ordering': "['start_date', 'end_date', 'name']", 'object_name': 'Event'},
             'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'description': ('django.db.models.fields.TextField', [], {}),
-            'description_html': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'end_date': ('django.db.models.fields.DateField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'image': ('sorl.thumbnail.fields.ImageField', [], {'max_length': '100', 'blank': 'True'}),
