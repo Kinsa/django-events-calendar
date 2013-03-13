@@ -19,4 +19,4 @@ class UpcomingEvents(Feed):
         return striptags(item.name)
 
     def item_description(self, item):
-        return item.description_html
+        return item.description
