@@ -22,9 +22,6 @@ Include in the PIP requirements file the following lines:
 
 ::
 
- PIL==1.1.6
- sorl-thumbnail==3.2.5
- south==0.7.6
  -e git://github.com/jbergantine/django-events.git#egg=events
 
 And then install as normal (IE:)
@@ -43,20 +40,24 @@ Add to the project's settings file tuple of INSTALLED_APPS:
  'events',
  'pil',
  'sorl.thumbnail',
- 'south'
 
-Sync the database to finish installing sorl-thumbnail.
+If you're using South, initiate the events application.
+
+::
+
+ $ python manage.py schemamigration events --auto
+
+Sync the database to finish installing sorl-thumbnail and events if you aren't using South.
 
 ::
 
  $ python manage.py syncdb
 
-Migrate the database to finish installing events.
+If you're using South, migrate the events application to finish installing it.
 
 ::
 
- $ python manage.py migrate
-
+ $ python manage.py migrate events
 
 In the project's urls.py file add: 
 
@@ -68,13 +69,13 @@ A list of upcoming events can now be linked to:
 
 ::
 
- <a href="{% url events %}">Events</a>
+ <a href="{% url 'events' %}">Events</a>
 
 The RSS feed of upcoming events can now be referred to in the ``<head>`` of your HTML templates:
 
 ::
     
- <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url events_feed %}" />
+ <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url 'events_feed' %}" />
 
 Configure the Templates
 =======================
