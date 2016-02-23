@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sorl.thumbnail',
     'events',
+    'tests',
 ]
 
 ROOT_URLCONF = 'tests.urls'

@@ -8,7 +8,6 @@ from events.models import Event
 
 
 class EventTest(TestCase):
-
     fixtures = ['test_data_events.json']
 
     def setUp(self):
@@ -34,13 +33,13 @@ class EventTest(TestCase):
         ffe.save()
 
         fpe = Event.objects.get(name='Far Past Event')
-        fpe.start_date = today - datetime.timedelta(weeks=42)
-        fpe.end_date = today - datetime.timedelta(days=2, weeks=42)
+        fpe.start_date = today - datetime.timedelta(days=2, weeks=42)
+        fpe.end_date = today - datetime.timedelta(weeks=42)
         fpe.save()
 
         npe = Event.objects.get(name='Near Past Event')
-        npe.start_date = today - datetime.timedelta(weeks=2)
-        npe.end_date = today - datetime.timedelta(days=2, weeks=2)
+        npe.start_date = today - datetime.timedelta(days=2, weeks=2)
+        npe.end_date = today - datetime.timedelta(weeks=2)
         npe.save()
 
         # Test that we now have 3 upcoming / ongoing events and 5 total events
@@ -60,5 +59,6 @@ class EventTest(TestCase):
             self.assertContains(r, event.name)
         for event in Event.objects.all():
             if not event.name == 'Current Event' \
-                    and not event.name == 'Near Future Event':
+                    and not event.name == 'Near Future Event' \
+                    and not event.name == 'Far Future Event':
                 self.assertNotContains(r, event.name)

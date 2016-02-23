@@ -4,6 +4,12 @@ Django Events
 
 A simple upcoming events calendar for Django.
 
+.. image:: https://travis-ci.org/jbergantine/django-events.svg?branch=develop
+
+`View builds on TravisCI.`__
+
+__ https://travis-ci.org/jbergantine/django-events
+
 Installation from Source
 ========================
 

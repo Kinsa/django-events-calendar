@@ -7,8 +7,8 @@ from sorl.thumbnail import ImageField
 
 
 class UpcomingEventManager(models.Manager):
-    def get_query_set(self):
-        return super(UpcomingEventManager, self).get_query_set().filter(
+    def get_queryset(self):
+        return super(UpcomingEventManager, self).get_queryset().filter(
             end_date__gte=datetime.date.today()
         )
 
@@ -56,5 +56,5 @@ class Event(models.Model):
     def __unicode__(self):
         return self.name
 
-    upcoming = UpcomingEventManager() # default manager
-    objects = models.Manager()
+    objects = models.Manager()  # default manager
+    upcoming = UpcomingEventManager()
