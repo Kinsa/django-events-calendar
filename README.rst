@@ -37,7 +37,7 @@ And then install as normal (IE:)
 Setup the Project For the Application
 =====================================
 
-Add to the project's settings file tuple of INSTALLED_APPS:
+Add to the `INSTALLED_APPS` tuple in the project's settings file:
 
 ::
 
