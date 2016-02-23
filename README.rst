@@ -41,26 +41,8 @@ Add to the ``INSTALLED_APPS`` tuple in the project's settings file:
 
 ::
 
- 'events',
  'sorl.thumbnail',
-
-If you're using South, initiate the events application.
-
-::
-
- $ python manage.py schemamigration events --auto
-
-Sync the database to finish installing sorl-thumbnail and events if you aren't using South.
-
-::
-
- $ python manage.py syncdb
-
-If you're using South, migrate the events application to finish installing it.
-
-::
-
- $ python manage.py migrate events
+ 'events',
 
 In the project's urls.py file add:
 
@@ -83,7 +65,7 @@ The RSS feed of upcoming events can now be referred to in the ``<head>`` of your
 Configure the Templates
 =======================
 
-By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using Virtualenv, ``cd`` to the root of the django project and execute the following command:
+By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using VirtualEnv, ``cd`` to the root of the Django project and execute the following command:
 
 ::
 
