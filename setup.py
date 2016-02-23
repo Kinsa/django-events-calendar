@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='django-templatetags',
-    version='1.1.0',
+    name='django-events',
+    version='1.0.0',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'PIL>=1.1.6',
@@ -14,7 +14,7 @@ setup(
     author_email='jbergantine@gmail.com',
     description="Simple Upcoming Events Calendar for Django",
     url='https://github.com/jbergantine/django-events',
-    download_url='https://github.com/jbergantine/django-events/tarball/1.0.0',
+    download_url='https://github.com/jbergantine/django-events/tarball/develop',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
