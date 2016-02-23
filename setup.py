@@ -6,7 +6,7 @@ setup(
     version='1.0.0',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
-        'PIL>=1.1.6',
+        'Pillow>=3.1.1',
         'sorl-thumbnail>=3.2.5',
         'Django>=1.4'
     ],

@@ -31,12 +31,11 @@ And then install as normal (IE:)
 Setup the Project For the Application
 =====================================
 
-Add to the project's settings file tuple of INSTALLED_APPS: 
+Add to the project's settings file tuple of INSTALLED_APPS:
 
 ::
 
  'events',
- 'pil',
  'sorl.thumbnail',
 
 If you're using South, initiate the events application.
@@ -57,12 +56,12 @@ If you're using South, migrate the events application to finish installing it.
 
  $ python manage.py migrate events
 
-In the project's urls.py file add: 
+In the project's urls.py file add:
 
 ::
 
  url(r'^events/', include('events.urls')),
-    
+
 A list of upcoming events can now be linked to:
 
 ::
@@ -72,13 +71,13 @@ A list of upcoming events can now be linked to:
 The RSS feed of upcoming events can now be referred to in the ``<head>`` of your HTML templates:
 
 ::
-    
+
  <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url 'events_feed' %}" />
 
 Configure the Templates
 =======================
 
-By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using Virtualenv, ``cd`` to the root of the django project and execute the following command: 
+By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using Virtualenv, ``cd`` to the root of the django project and execute the following command:
 
 ::
 
