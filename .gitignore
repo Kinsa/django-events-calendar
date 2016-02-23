@@ -4,3 +4,4 @@ dist
 .eggs/
 .tox/
 *.egg-info
+build/

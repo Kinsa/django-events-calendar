@@ -14,7 +14,7 @@ setup(
     author_email='jbergantine@gmail.com',
     description="Simple Upcoming Events Calendar for Django",
     url='https://github.com/jbergantine/django-events',
-    download_url='https://github.com/jbergantine/django-events/tarball/develop',
+    download_url='https://github.com/jbergantine/django-events/tarball/1.0.0',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
