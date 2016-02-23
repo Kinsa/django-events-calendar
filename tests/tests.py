@@ -28,11 +28,27 @@ class EventTest(TestCase):
         nfe.end_date = today + datetime.timedelta(days=2, weeks=2)
         nfe.save()
 
-        # Test that we now have 2 upcoming / ongoing events and 5 total events
+        ffe = Event.objects.get(name='Far Future Event')
+        ffe.start_date = today + datetime.timedelta(weeks=42)
+        ffe.end_date = today + datetime.timedelta(days=2, weeks=42)
+        ffe.save()
+
+        fpe = Event.objects.get(name='Far Past Event')
+        fpe.start_date = today - datetime.timedelta(weeks=42)
+        fpe.end_date = today - datetime.timedelta(days=2, weeks=42)
+        fpe.save()
+
+        npe = Event.objects.get(name='Near Past Event')
+        npe.start_date = today - datetime.timedelta(weeks=2)
+        npe.end_date = today - datetime.timedelta(days=2, weeks=2)
+        npe.save()
+
+        # Test that we now have 3 upcoming / ongoing events and 5 total events
         self.assertEqual(Event.objects.all().count(), 5)
-        self.assertEqual(Event.upcoming.all().count(), 2)
+        self.assertEqual(Event.upcoming.all().count(), 3)
         self.assertEqual(Event.upcoming.all()[0].name, 'Current Event')
         self.assertEqual(Event.upcoming.all()[1].name, 'Near Future Event')
+        self.assertEqual(Event.upcoming.all()[2].name, 'Far Future Event')
 
         # Test that the event_list template is used
         r = self.client.get(reverse('events'))
