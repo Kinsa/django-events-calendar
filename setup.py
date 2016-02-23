@@ -6,8 +6,9 @@ setup(
     version='1.1.0',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
-        'beautifulsoup4>=4.0',
-        'Django>=1.7'
+        'PIL>=1.1.6',
+        'sorl-thumbnail>=3.2.5',
+        'Django>=1.4'
     ],
     author='Joe Bergantine',
     author_email='jbergantine@gmail.com',
