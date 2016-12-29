@@ -8,7 +8,7 @@ setup(
     install_requires=[
         'Pillow>=3.1.1',
         'sorl-thumbnail>=3.2.5',
-        'Django>=1.7'
+        'Django>=1.8'
     ],
     author='Joe Bergantine',
     author_email='jbergantine@gmail.com',
@@ -21,9 +21,9 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
