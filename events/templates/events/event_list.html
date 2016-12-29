@@ -14,7 +14,7 @@
                     {% if object.start_date == object.end_date %}
                         <time datetime="{{ object.start_date|date:"Y-m-d" }}">{{ object.start_date|date:"n/d" }}</time>
                     {% else %}
-                        {% if object.start_date|date:"m" = object.end_date|date:"m" %}
+                        {% if object.start_date|date:"m" == object.end_date|date:"m" %}
                             <time datetime="{{ object.start_date|date:"Y-m-d" }}">{{ object.start_date|date:"n/d" }}</time> <abbr title="through">-</abbr> <time datetime="{{ object.end_date|date:"Y-m-d" }}">{{ object.end_date|date:"d" }}</time>
                         {% else %}
                             <time datetime="{{ object.start_date|date:"Y-m-d" }}">{{ object.start_date|date:"n/d" }}</time> <abbr title="through">-</abbr> <time datetime="{{ object.end_date|date:"Y-m-d" }}">{{ object.end_date|date:"n/d" }}</time>

@@ -1,6 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.shortcuts import render
 from django.views.decorators.cache import never_cache
 
 from events.models import Event
@@ -12,6 +11,7 @@ def event_list(request):
     if not object_list:
         raise Http404
 
-    return render_to_response('events/event_list.html',
-        {'object_list': object_list},
-        context_instance=RequestContext(request))
+    return render(request,
+                  template_name='events/event_list.html',
+                  context={'object_list': object_list}
+                  )
