@@ -11,7 +11,8 @@ def event_list(request):
     if not object_list:
         raise Http404
 
-    return render(request,
-                  template_name='events/event_list.html',
-                  context={'object_list': object_list}
-                  )
+    return render(
+        request,
+        template_name='events/event_list.html',
+        context={'object_list': object_list}
+    )
