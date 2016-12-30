@@ -39,20 +39,20 @@ In the project's urls.py file add:
 
     from django.conf.urls import include
     ...
-    url(r'^events/', include('events.urls')),
+    url(r'^events/', include('events.urls', namespace='events')),
 
 A list of upcoming events can now be linked to:
 
 .. code:: html
 
-    <a href="{% url 'events' %}">Events</a>
+    <a href="{% url 'events:events_list' %}">Events</a>
 
 The RSS feed of upcoming events can now be referred to in the ``<head>``
 of your HTML templates:
 
 .. code:: html
 
-    <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url 'events_feed' %}" />
+    <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url 'events:events_feed' %}" />
 
 Configure the Templates
 ~~~~~~~~~~~~~~~~~~~~~~~

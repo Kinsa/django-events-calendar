@@ -21,7 +21,7 @@ class Event(models.Model):
 
     slug = models.SlugField(
         unique=True,
-        help_text='Suggested value automatically generated from title. '\
+        help_text='Suggested value automatically generated from title. '
                   'Must be unique.'
     )
 
@@ -40,7 +40,7 @@ class Event(models.Model):
 
     image_alt_text = models.CharField(
         max_length=250,
-        help_text='Describe the image as you would to someone over the phone. '\
+        help_text='Describe the image as you would to someone over the phone. '
                   'Max length 250 characters.'
     )
 
@@ -48,7 +48,7 @@ class Event(models.Model):
     updated = models.DateTimeField(auto_now=True, editable=False)
 
     def get_absolute_url(self):
-        return reverse('events')
+        return reverse('events:events_list')
 
     class Meta:
         ordering = ['start_date', 'end_date', 'name']
