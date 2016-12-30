@@ -1,19 +1,12 @@
-import io
+import os
 
 from setuptools import setup, find_packages
 
+description = "Simple Upcoming Events Calendar for Django"
+long_description = description
 
-def read(*filenames, **kwargs):
-    encoding = kwargs.get('encoding', 'utf-8')
-    sep = kwargs.get('sep', '\n')
-    buf = []
-    for filename in filenames:
-        with io.open(filename, encoding=encoding) as f:
-            buf.append(f.read())
-    return sep.join(buf)
-
-long_description = read('readme.md')
-
+if os.path.exists('README.rst'):
+    long_description = open('README.rst').read()
 
 setup(
     name='django-events',
@@ -26,7 +19,7 @@ setup(
     ],
     author='Joe Bergantine',
     author_email='jbergantine@gmail.com',
-    description="Simple Upcoming Events Calendar for Django",
+    description=description,
     long_description=long_description,
     url='https://github.com/jbergantine/django-events',
     download_url='https://github.com/jbergantine/django-events/tarball/1.0.3',
