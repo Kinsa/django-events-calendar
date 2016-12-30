@@ -64,6 +64,8 @@ In the project's urls.py file add:
 
 ::
 
+ from django.conf.urls import include
+ ...
  url(r'^events/', include('events.urls')),
 
 A list of upcoming events can now be linked to:
