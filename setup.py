@@ -39,4 +39,6 @@ setup(
     ],
     test_suite="runtests.runtests",
     include_package_data=True,
+    setup_requires=['setuptools-markdown'],
+    long_description_markdown_filename='readme.md',
 )
