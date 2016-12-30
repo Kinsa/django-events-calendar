@@ -6,7 +6,6 @@ setup(
     version='1.0.3',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
-        'setuptools-markdown',
         'Pillow>=3.1.1',
         'sorl-thumbnail>=3.2.5',
         'Django>=1.8'

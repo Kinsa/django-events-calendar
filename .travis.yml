@@ -1,5 +1,6 @@
 language: python
 python: 3.5
+cache: apt
 env:
   - TOX_ENV=py27-18
   - TOX_ENV=py27-19
@@ -12,11 +13,9 @@ env:
   - TOX_ENV=py35-19
   - TOX_ENV=py35-110
 # command to install dependencies
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install pandoc
 install:
-  - pip install tox
+  - sudo apt-get install pandoc
+  - pip install tox setuptools-markdown
 # command to run tests
 script:
   - tox -e $TOX_ENV
