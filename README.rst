@@ -10,6 +10,13 @@ A simple upcoming events calendar for Django.
 
 __ https://travis-ci.org/jbergantine/django-events
 
+Installation via PIP
+====================
+
+::
+
+  $ pip install -e git://github.com/jbergantine/django-events.git#egg=events
+
 Installation from Source
 ========================
 
@@ -19,39 +26,10 @@ Installation from Source
  $ cd django-events
  $ python setup.py install
 
-Installation via PIP Requirements File
-======================================
+Usage
+=====
 
-Include in the PIP requirements file the following lines:
-
-::
-
- -e git://github.com/jbergantine/django-events.git#egg=events
-
-And then install as normal (IE:)
-
-::
-
- $ pip install -r path/to/requirements/file.txt
-
-Testing
-=======
-
-::
-
- $ python setup.py test
-
-With TOX
-
-First, install Tox, then run the tests. This will test against the Django versions specified in the environments specified in the ``tox.ini`` file
-
-::
-
- $ pip install tox
- $ tox
-
-Setup the Project For the Application
-=====================================
+### Setup the Project For the Application
 
 Add to the ``INSTALLED_APPS`` tuple in the project's settings file:
 
@@ -80,11 +58,26 @@ The RSS feed of upcoming events can now be referred to in the ``<head>`` of your
 
  <link rel="feed alternate" type="application/rss+xml" title="Events" href="{% url 'events_feed' %}" />
 
-Configure the Templates
-=======================
+### Configure the Templates
 
 By default the templates contain only the bare necessities. To override the default templates, create a directory called events in your templates directory and copy the templates from the project into that directory in order to make adjustments to them. If you're using VirtualEnv, ``cd`` to the root of the Django project and execute the following command:
 
 ::
 
  cp -r $VIRTUAL_ENV/src/django-events/events/templates/events templates/events
+
+Testing
+=======
+
+::
+
+ $ python setup.py test
+
+With TOX
+
+First, install Tox, then run the tests. This will test against the Django versions specified in the environments specified in the ``tox.ini`` file
+
+::
+
+ $ pip install tox
+ $ tox
