@@ -19,4 +19,4 @@ install:
 script:
   - tox -e $TOX_ENV
 # containers
-sudo: false
+sudo: required
