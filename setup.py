@@ -1,4 +1,18 @@
+import io
+
 from setuptools import setup, find_packages
+
+
+def read(*filenames, **kwargs):
+    encoding = kwargs.get('encoding', 'utf-8')
+    sep = kwargs.get('sep', '\n')
+    buf = []
+    for filename in filenames:
+        with io.open(filename, encoding=encoding) as f:
+            buf.append(f.read())
+    return sep.join(buf)
+
+long_description = read('readme.md')
 
 
 setup(
@@ -13,6 +27,7 @@ setup(
     author='Joe Bergantine',
     author_email='jbergantine@gmail.com',
     description="Simple Upcoming Events Calendar for Django",
+    long_description=long_description,
     url='https://github.com/jbergantine/django-events',
     download_url='https://github.com/jbergantine/django-events/tarball/1.0.3',
     license='New BSD License',
@@ -39,6 +54,4 @@ setup(
     ],
     test_suite="runtests.runtests",
     include_package_data=True,
-    setup_requires=['setuptools-markdown'],
-    long_description_markdown_filename='readme.md',
 )

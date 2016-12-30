@@ -15,7 +15,7 @@ env:
 # command to install dependencies
 install:
   - sudo apt-get install pandoc
-  - pip install tox setuptools-markdown
+  - pip install tox
 # command to run tests
 script:
   - tox -e $TOX_ENV
