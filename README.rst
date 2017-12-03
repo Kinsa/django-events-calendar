@@ -88,8 +88,5 @@ Django versions specified in the environments specified in the
     $ pip install tox
     $ tox
 
-Releasing
-=========
-
 .. |TravisCI Build Status| image:: https://travis-ci.org/jbergantine/django-events.svg?branch=develop
    :target: https://travis-ci.org/jbergantine/django-events
