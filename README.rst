@@ -1,4 +1,5 @@
-============= Django Events =============
+Django Events
+--------------------
 
 A simple upcoming events calendar for Django.
 
@@ -89,14 +90,6 @@ Django versions specified in the environments specified in the
 
 Releasing
 =========
-
-Before releasing, rebuild the readme file as a reStructuredTxt file
-using `pandoc <http://pandoc.org>`__. Pandoc will need to be installed
-on the system first.
-
-.. code:: sh
-
-    $ pandoc --from=markdown --to=rst --output=README.rst README.md
 
 .. |TravisCI Build Status| image:: https://travis-ci.org/jbergantine/django-events.svg?branch=develop
    :target: https://travis-ci.org/jbergantine/django-events
