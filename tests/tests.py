@@ -1,8 +1,14 @@
 import datetime
 
-from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client
+
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
+
+from django.utils import timezone
 
 from events.models import Event
 
@@ -14,7 +20,7 @@ class EventTest(TestCase):
         self.client = Client()
 
     def test_event_routing(self):
-        today = datetime.date.today()
+        today = timezone.now().today()
 
         # Update the fixture dates
         ce = Event.objects.get(name='Current Event')
@@ -50,7 +56,7 @@ class EventTest(TestCase):
         self.assertEqual(Event.upcoming.all()[2].name, 'Far Future Event')
 
         # Test that the event_list template is used
-        r = self.client.get(reverse('events'))
+        r = self.client.get(reverse('events:events_list'))
         self.assertEqual(r.status_code, 200)
         self.assertTemplateUsed(r, 'events/event_list.html')
 
@@ -62,3 +68,7 @@ class EventTest(TestCase):
                     and not event.name == 'Near Future Event' \
                     and not event.name == 'Far Future Event':
                 self.assertNotContains(r, event.name)
+
+        # Test the event feed
+        rf = self.client.get(reverse('events:events_feed'))
+        self.assertEqual(rf.status_code, 200)

@@ -1,7 +1,10 @@
-import datetime
-
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils import timezone
+
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 
 from sorl.thumbnail import ImageField
 
@@ -9,7 +12,7 @@ from sorl.thumbnail import ImageField
 class UpcomingEventManager(models.Manager):
     def get_queryset(self):
         return super(UpcomingEventManager, self).get_queryset().filter(
-            end_date__gte=datetime.date.today()
+            end_date__gte=timezone.now().date()
         )
 
 
@@ -21,7 +24,7 @@ class Event(models.Model):
 
     slug = models.SlugField(
         unique=True,
-        help_text='Suggested value automatically generated from title. '\
+        help_text='Suggested value automatically generated from title. '
                   'Must be unique.'
     )
 
@@ -40,7 +43,7 @@ class Event(models.Model):
 
     image_alt_text = models.CharField(
         max_length=250,
-        help_text='Describe the image as you would to someone over the phone. '\
+        help_text='Describe the image as you would to someone over the phone. '
                   'Max length 250 characters.'
     )
 
@@ -48,7 +51,7 @@ class Event(models.Model):
     updated = models.DateTimeField(auto_now=True, editable=False)
 
     def get_absolute_url(self):
-        return reverse('events')
+        return reverse('events:events_list')
 
     class Meta:
         ordering = ['start_date', 'end_date', 'name']
