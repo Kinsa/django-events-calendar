@@ -1,5 +1,6 @@
+=============
 Django Events
---------------------
+=============
 
 A simple upcoming events calendar for Django.
 
