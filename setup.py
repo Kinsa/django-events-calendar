@@ -10,7 +10,7 @@ if os.path.exists('README.rst'):
 
 setup(
     name='django-events',
-    version='1.0.3',
+    version='1.0.4',
     packages=find_packages(exclude=["tests"]),
     install_requires=[
         'Pillow>=3.1.1',
@@ -22,13 +22,14 @@ setup(
     description=description,
     long_description=long_description,
     url='https://github.com/jbergantine/django-events',
-    download_url='https://github.com/jbergantine/django-events/tarball/1.0.3',
+    download_url='https://github.com/jbergantine/django-events/tarball/1.0.4',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
+        'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
