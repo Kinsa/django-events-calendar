@@ -18,7 +18,7 @@ setup(
         'Django>=1.8'
     ],
     author='Joe Bergantine',
-    author_email='jbergantine@gmail.com',
+    author_email='joe.bergantine@gmail.com',
     description=description,
     long_description=long_description,
     url='https://github.com/jbergantine/django-events',
