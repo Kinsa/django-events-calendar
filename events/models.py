@@ -1,7 +1,10 @@
-import datetime
-
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils import timezone
+
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 
 from sorl.thumbnail import ImageField
 
@@ -9,7 +12,7 @@ from sorl.thumbnail import ImageField
 class UpcomingEventManager(models.Manager):
     def get_queryset(self):
         return super(UpcomingEventManager, self).get_queryset().filter(
-            end_date__gte=datetime.date.today()
+            end_date__gte=timezone.now().date()
         )
 
 

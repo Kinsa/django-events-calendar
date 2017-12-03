@@ -1,8 +1,14 @@
 import datetime
 
-from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client
+
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
+
+from django.utils import timezone
 
 from events.models import Event
 
@@ -14,7 +20,7 @@ class EventTest(TestCase):
         self.client = Client()
 
     def test_event_routing(self):
-        today = datetime.date.today()
+        today = timezone.now().today()
 
         # Update the fixture dates
         ce = Event.objects.get(name='Current Event')
