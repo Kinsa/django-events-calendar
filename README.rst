@@ -32,7 +32,6 @@ Add to the ``INSTALLED_APPS`` tuple in the project's settings file:
 
 .. code:: py
 
-    'sorl.thumbnail',
     'events',
 
 In the project's urls.py file add:
