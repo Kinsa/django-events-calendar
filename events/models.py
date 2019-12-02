@@ -6,8 +6,6 @@ try:
 except ImportError:
     from django.core.urlresolvers import reverse
 
-from sorl.thumbnail import ImageField
-
 
 class UpcomingEventManager(models.Manager):
     def get_queryset(self):
@@ -35,7 +33,7 @@ class Event(models.Model):
 
     description = models.TextField()
 
-    image = ImageField(
+    image = models.ImageField(
         upload_to='events',
         blank=True,
         help_text='80px X 80px'
