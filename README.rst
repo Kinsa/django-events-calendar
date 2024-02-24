@@ -4,21 +4,19 @@ Django Events
 
 A simple upcoming events calendar for Django.
 
-|TravisCI Build Status|
-
 Installation via PIP
 ====================
 
 .. code:: sh
 
-    $ pip install -e git://github.com/bergantine/django-events.git#egg=events
+    $ pip install -e git://github.com/Kinsa/django-events.git#egg=events
 
 Installation from Source
 ========================
 
 .. code:: sh
 
-    $ git clone git://github.com/bergantine/django-events.git
+    $ git clone git://github.com/Kinsa/django-events.git
     $ cd django-events
     $ python setup.py install
 
@@ -88,5 +86,5 @@ Django versions specified in the environments specified in the
     $ pip install tox
     $ tox
 
-.. |TravisCI Build Status| image:: https://travis-ci.org/bergantine/django-events.svg?branch=develop
-   :target: https://travis-ci.org/bergantine/django-events
+.. |TravisCI Build Status| image:: https://travis-ci.org/Kinsa/django-events.svg?branch=develop
+   :target: https://travis-ci.org/Kinsa/django-events

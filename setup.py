@@ -16,12 +16,12 @@ setup(
         'Pillow>=3.1.1',
         'Django>=1.11'
     ],
-    author='Joe Bergantine',
-    author_email='joe@kinsa.us',
+    author='Kinsa Creative Incorporated',
+    author_email='enquiries@kinsa.cc',
     description=description,
     long_description=long_description,
-    url='https://github.com/bergantine/django-events',
-    download_url='https://github.com/bergantine/django-events/tarball/1.0.6',
+    url='https://github.com/Kinsa/django-events',
+    download_url='https://github.com/Kinsa/django-events/tarball/1.0.6',
     license='New BSD License',
     platforms=['any'],
     classifiers=[
